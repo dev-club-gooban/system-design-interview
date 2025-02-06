@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ch4/hongxeob/hongxeob.iml" filepath="$PROJECT_DIR$/ch4/hongxeob/hongxeob.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/system-design-interview.iml" filepath="$PROJECT_DIR$/.idea/system-design-interview.iml" />
     </modules>
   </component>
