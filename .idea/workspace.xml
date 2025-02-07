@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a126e11d-4cc9-4332-97d8-2a7470fc6fc7" name="Changes" comment="project init">
-      <change afterPath="$PROJECT_DIR$/ch4/hongxeob/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch4/hongxeob/src/main/java/practice/hongxeob/exception/IgnoreException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch4/hongxeob/src/main/java/practice/hongxeob/exception/RecordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="a126e11d-4cc9-4332-97d8-2a7470fc6fc7" name="Changes" comment="feat: Retry, Ignore 예외 추가">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch4/hongxeob/src/main/java/practice/hongxeob/controller/RateLimiterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch4/hongxeob/src/main/java/practice/hongxeob/service/RateLimiterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/.gradle/8.12.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch4/hongxeob/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch4/hongxeob/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch4/hongxeob/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ch4/hongxeob/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -116,6 +114,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="practice.hongxeob.service" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.HongxeobApplication">
     <configuration name="HongxeobApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hongxeob.main" />
@@ -158,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738832059740</updated>
-      <workItem from="1738832060610" duration="4889000" />
+      <workItem from="1738832060610" duration="11194000" />
     </task>
     <task id="LOCAL-00001" summary="update git ignore">
       <option name="closed" value="true" />
@@ -184,7 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738834066382</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore : resilience4j 의존성 주입">
+      <option name="closed" value="true" />
+      <created>1738893290974</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738893290974</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Retry, Ignore 예외 추가">
+      <option name="closed" value="true" />
+      <created>1738893329816</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738893329816</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +212,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update git ignore" />
     <MESSAGE value="project init" />
-    <option name="LAST_COMMIT_MESSAGE" value="project init" />
+    <MESSAGE value="chore : resilience4j 의존성 주입" />
+    <MESSAGE value="feat: Retry, Ignore 예외 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Retry, Ignore 예외 추가" />
   </component>
 </project>
