@@ -1,4 +1,4 @@
-package practice.hongxeob.service;
+package practice.hongxeob.ratelimiter.service;
 
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import lombok.RequiredArgsConstructor;
