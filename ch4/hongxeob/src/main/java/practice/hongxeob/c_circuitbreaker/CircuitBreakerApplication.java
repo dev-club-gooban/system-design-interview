@@ -1,41 +1,39 @@
-package practice.hongxeob.a_try;
+package practice.hongxeob.c_circuitbreaker;
 
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.core.registry.EntryAddedEvent;
 import io.github.resilience4j.core.registry.EntryRemovedEvent;
 import io.github.resilience4j.core.registry.EntryReplacedEvent;
 import io.github.resilience4j.core.registry.RegistryEventConsumer;
-import io.github.resilience4j.retry.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-@Slf4j
 @SpringBootApplication
-public class RetryApplication {
-
+@Slf4j
+public class CircuitBreakerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RetryApplication.class, args);
+        SpringApplication.run(CircuitBreakerApplication.class, args);
     }
 
     @Bean
-    public RegistryEventConsumer<Retry> myRegistryEventConsumer() {
-
-        return new RegistryEventConsumer<Retry>() {
+    public RegistryEventConsumer<CircuitBreaker> myRegistryEventConsumer() {
+        return new RegistryEventConsumer<CircuitBreaker>() {
             @Override
-            public void onEntryAddedEvent(EntryAddedEvent<Retry> entryAddedEvent) {
+            public void onEntryAddedEvent(EntryAddedEvent<CircuitBreaker> entryAddedEvent) {
                 log.info("RegistryEventConsumer.onEntryAddedEvent");
                 entryAddedEvent.getAddedEntry().getEventPublisher().onEvent(event -> log.info(event.toString()));
-
+                entryAddedEvent.getAddedEntry().getEventPublisher().onFailureRateExceeded(event -> log.info(event.getEventType().toString()));
             }
 
             @Override
-            public void onEntryRemovedEvent(EntryRemovedEvent<Retry> entryRemoveEvent) {
+            public void onEntryRemovedEvent(EntryRemovedEvent<CircuitBreaker> entryRemoveEvent) {
                 log.info("RegistryEventConsumer.onEntryRemovedEvent");
             }
 
             @Override
-            public void onEntryReplacedEvent(EntryReplacedEvent<Retry> entryReplacedEvent) {
+            public void onEntryReplacedEvent(EntryReplacedEvent<CircuitBreaker> entryReplacedEvent) {
                 log.info("RegistryEventConsumer.onEntryReplacedEvent");
             }
         };
