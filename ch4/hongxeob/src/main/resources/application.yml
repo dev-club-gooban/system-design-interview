@@ -1,5 +1,5 @@
 spring:
-  application.name: resilience4j-demo-by-foo
+  application.name: resilience4j-demo-by-hongxeob
 
 server:
   port: 8080
