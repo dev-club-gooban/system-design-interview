@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    # 메인 데이터소스 (레플리카 1)
+    primary:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1
+      username: sa
+      password:
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 5
+
+    # 레플리카 2
+    replica1:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:db2;DB_CLOSE_DELAY=-1
+      username: sa
+      password:
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 5
+
+    # 레플리카 3
+    replica2:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:db3;DB_CLOSE_DELAY=-1
+      username: sa
+      password:
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 5
+
+  # H2 콘솔 설정 (필요시)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+
+# 로깅 설정
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.yourpackage: DEBUG
+    org.hibernate.SQL: DEBUG  # SQL 쿼리 로깅 (필요시)
+
+# 애플리케이션 설정
+app:
+  database-router:
+    hash-type: consistent  # consistent 또는 modulo
+    virtual-nodes: 10      # 안정 해시에서 가상 노드 수
